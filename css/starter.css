@@ -5,6 +5,7 @@
     padding: 0;
     margin: 0;
 }
+
 html {
     color: #222;
     font-size: 1em;
@@ -12,22 +13,37 @@ html {
     font-family: sans-serif;
     scroll-behavior: smooth;
     text-rendering: optimizeLegibility;
+    height: 100%;
 }
 body {
     background: #cbdedd;
     margin:0;
 }
     
-    img {
+img {
     display: block;
     width: 100%;
     }
 
+.navigation {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: #424c9f;
+}
+
 .gallery {
     display: grid;
+    height: 100%;
     margin: 1em 10em 1em 10em;
     gap: 1rem;
     grid-template-columns: repeat(3, minmax(240px, 1fr));
+}
+
+.gallery img {
+    
+    height: 100%;
 }
 
 .item img:hover {
@@ -158,10 +174,9 @@ body {
 }
 
 .main-nav {
-    list-style: none;
-    flex-direction: row;
-    justify-content: flex-end;
     display: flex;
+    list-style: none;
+    flex-direction: column;
     width: 100%;
     background: #4d7b79;
     }  
@@ -171,7 +186,7 @@ body {
     text-align: center;
     border-top: 2px;
     display: block;
-    padding: 1.5em 8em;
+    padding: 10px;
     letter-spacing:2px;
     color: white;
     text-transform: uppercase;
@@ -181,8 +196,20 @@ body {
 
 .main-nav a:hover {
   background: #e8d5bb;
+  opacity: 1;
 }
 
+
+  .flex-container {
+    flex-direction: row;
+  }
+
+@media only screen and (min-width: 60em) {
+.main-nav {
+    flex-direction: row; /* change the flex-direction */
+    justify-content: space-around; /* change the spacing */
+  }
+}
 
 
 /*hobbies.html*/
@@ -255,8 +282,10 @@ img{
 }
 
 article {
-  background: lightgrey;
+  background: #E8E8E8;
   padding: 1rem;
+  
+ 
 }
 
 h1 {
@@ -432,4 +461,6 @@ article p {
     }
     */
     /* highlight the item and use Command + slash to comment something out. */
+
+
 
